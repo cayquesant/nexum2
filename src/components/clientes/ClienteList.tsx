@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Cliente, STATUS_CLIENTE } from '@/types'
 import { ClienteCard } from './ClienteCard'
 import { ClienteModal } from './ClienteModal'
@@ -10,6 +11,7 @@ import { authFetch } from '@/lib/api-client'
 import { IconLoader2, IconPlus, IconSearch, IconUsersGroup, IconFilter } from '@tabler/icons-react'
 
 export function ClienteList() {
+  const pathname = usePathname()
   const { currentCompany } = useCompanyStore()
   const { canCreateEdit } = usePermissions()
 
@@ -21,10 +23,10 @@ export function ClienteList() {
   const [selectedClienteId, setSelectedClienteId] = useState<string | null>(null)
 
   useEffect(() => {
-    if (currentCompany) {
+    if (currentCompany && pathname === '/configuracao/gestao-clientes') {
       loadClientes()
     }
-  }, [currentCompany, statusFilter])
+  }, [currentCompany, pathname, statusFilter])
 
   const loadClientes = async () => {
     if (!currentCompany) return
