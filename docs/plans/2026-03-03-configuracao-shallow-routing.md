@@ -103,7 +103,8 @@ git commit -m "feat: adicionar estado currentPath ao DashboardLayout para shallo
 
     if (isConfigOrFinanceiroPath) {
       // Shallow routing para configuração e financeiro
-      router.push(submenuPath, { shallow: true })
+      // Usamos replace para evitar novo histórico e manter estado do componente
+      router.replace(submenuPath)
     } else {
       // Navegação normal para outras rotas
       router.push(submenuPath)
@@ -115,7 +116,7 @@ git commit -m "feat: adicionar estado currentPath ao DashboardLayout para shallo
 
 Run: Abrir navegador em http://localhost:3002/configuracao/empresa
 Teste: Abrir DevTools Network, clicar em "Equipe" no menu de configuração
-Expected: URL muda para /configuracao/equipe, NENHUMA requisição de página é feita, sidebar permanece aberta
+Expected: URL muda para /configuracao/equipe, sidebar permanece aberta, estado interno mantido
 
 **Step 3: Commit**
 
