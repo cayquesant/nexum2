@@ -21,8 +21,6 @@ import {
 interface DashboardLayoutProps {
   children: ReactNode
   activeMenu: string
-  configSubmenuOpen?: boolean
-  setConfigSubmenuOpen?: (open: boolean) => void
 }
 
 const layoutOptions: { value: LayoutMode; label: string; icon: typeof Monitor; description: string }[] = [
@@ -34,8 +32,6 @@ const layoutOptions: { value: LayoutMode; label: string; icon: typeof Monitor; d
 export default function DashboardLayout({
   children,
   activeMenu,
-  configSubmenuOpen = false,
-  setConfigSubmenuOpen,
 }: DashboardLayoutProps) {
   const router = useRouter()
   const pathname = usePathname()
@@ -46,6 +42,9 @@ export default function DashboardLayout({
   const [isCheckingAuth, setIsCheckingAuth] = useState(true)
   const [showCompanySelector, setShowCompanySelector] = useState(false)
   const [showUserDropdown, setShowUserDropdown] = useState(false)
+  const [configSubmenuOpen, setConfigSubmenuOpen] = useState(false)
+  const [financeiroSubmenuOpen, setFinanceiroSubmenuOpen] = useState(false)
+  const [currentPath, setCurrentPath] = useState(pathname)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const userIsSuperAdmin = user ? isSuperAdmin(user.role) : false
@@ -75,6 +74,19 @@ export default function DashboardLayout({
     }
   }, [isCheckingAuth, isAuthenticated, loadCompanies])
 
+  // Detectar mudanças de rota para shallow routing
+  useEffect(() => {
+    setCurrentPath(pathname)
+  }, [pathname])
+
+  // Auto-open submenu based on pathname
+  useEffect(() => {
+    const isConfigPath = pathname.startsWith('/configuracao/')
+    const isFinanceiroPath = pathname.startsWith('/financeiro/')
+    setConfigSubmenuOpen(isConfigPath)
+    setFinanceiroSubmenuOpen(isFinanceiroPath)
+  }, [pathname])
+
   const handleLogout = async () => {
     await logout()
     router.push('/login')
@@ -83,12 +95,10 @@ export default function DashboardLayout({
   const handleMenuClick = (menuId: string) => {
     if (menuId === 'atividades') {
       router.push('/atividades')
-    } else if (menuId === 'calendario') {
-      router.push('/calendario')
     } else if (menuId === 'configuracao') {
-      if (setConfigSubmenuOpen) {
-        setConfigSubmenuOpen(!configSubmenuOpen)
-      }
+      setConfigSubmenuOpen(!configSubmenuOpen)
+    } else if (menuId === 'financeiro') {
+      setFinanceiroSubmenuOpen(!financeiroSubmenuOpen)
     }
   }
 
@@ -100,21 +110,15 @@ export default function DashboardLayout({
     { id: 'atividades', label: 'Atividades', icon: IconChecklist },
     { id: 'organizador', label: 'Organizador', icon: IconFolder },
     { id: 'relatorios', label: 'Relatorios', icon: IconReport },
-    { id: 'ia-agente', label: 'IA Agente', icon: IconBrain },
-    { id: 'calendario', label: 'Calendario', icon: IconCalendar },
-    { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
     {
-      id: 'configuracao',
-      label: 'Configuracao',
-      icon: IconSettings,
+      id: 'financeiro',
+      label: 'Financeiro',
+      icon: IconCoin,
       hasSubmenu: true,
       submenus: [
-        { id: 'empresa', label: 'Empresa', icon: IconBuilding, path: '/configuracao/empresa' },
-        { id: 'regras-financeiras', label: 'Regras Financeiras', icon: IconCoin, path: '/configuracao/regras-financeiras' },
-        { id: 'gestao-clientes', label: 'Gestao de Clientes', icon: IconUsersGroup, path: '/configuracao/gestao-clientes' },
-        { id: 'ia-automacao', label: 'IA & Automacao', icon: IconBrain, path: '/configuracao/ia-automacao' },
-        { id: 'equipe', label: 'Equipe', icon: IconUsers, path: '/configuracao/equipe' },
-      ]
+        { id: 'visao-geral', label: 'Visão Geral', icon: IconBrain, path: '/financeiro/visao-geral' },
+        { id: 'lancamentos', label: 'Lançamentos', icon: IconCalendar, path: '/financeiro/lancamentos' },
+      ],
     },
   ]
 
@@ -158,12 +162,13 @@ export default function DashboardLayout({
             <nav className="flex-1 p-4 space-y-2">
               {sidebarMenus.map((menu) => {
                 const Icon = menu.icon
+                const submenuOpen = menu.id === 'financeiro' ? financeiroSubmenuOpen : menu.id === 'configuracao' ? configSubmenuOpen : false
                 return (
                   <div key={menu.id}>
                     <button
                       onClick={() => handleMenuClick(menu.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
-                        activeMenu === menu.id
+                        currentPath.startsWith('/' + menu.id)
                           ? 'bg-nexum-primary/20 text-white border border-nexum-primary/30'
                           : 'text-white/60 hover:text-white hover:bg-white/5'
                       }`}
@@ -175,18 +180,18 @@ export default function DashboardLayout({
                           {menu.hasSubmenu && (
                             <ChevronDown
                               size={16}
-                              className={`transition-transform duration-200 ${configSubmenuOpen ? 'rotate-180' : ''}`}
+                              className={`transition-transform duration-200 ${submenuOpen ? 'rotate-180' : ''}`}
                             />
                           )}
                         </>
                       )}
                     </button>
 
-                    {!sidebarCollapsed && menu.hasSubmenu && configSubmenuOpen && menu.submenus && (
+                    {!sidebarCollapsed && menu.hasSubmenu && submenuOpen && menu.submenus && (
                       <div className="mt-1 ml-4 pl-4 border-l border-white/10 space-y-1">
                         {menu.submenus.map((submenu) => {
                           const SubIcon = submenu.icon
-                          const isActive = pathname === submenu.path
+                          const isActive = currentPath === submenu.path
                           return (
                             <button
                               key={submenu.id}
