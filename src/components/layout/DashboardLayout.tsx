@@ -111,9 +111,8 @@ export default function DashboardLayout({
       submenuPath.startsWith('/financeiro/')
 
     if (isConfigOrFinanceiroPath) {
-      // Shallow routing para configuração e financeiro
-      // Usamos replace para evitar novo histórico e manter estado do componente
-      router.replace(submenuPath)
+      // Navegação com push para manter histórico do navegador
+      router.push(submenuPath)
     } else {
       // Navegação normal para outras rotas
       router.push(submenuPath)
