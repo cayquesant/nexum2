@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import DashboardLayout from '@/components/layout/DashboardLayout'
 import { useCompanyStore } from '@/store'
 import { usePermissions } from '@/hooks/usePermissions'
@@ -14,6 +15,7 @@ interface Socio {
 }
 
 export default function SociosPage() {
+  const pathname = usePathname()
   const { currentCompany } = useCompanyStore()
   const { canCreateEdit } = usePermissions()
 
@@ -25,10 +27,10 @@ export default function SociosPage() {
   const [message, setMessage] = useState({ type: '', text: '' })
 
   useEffect(() => {
-    if (currentCompany) {
+    if (currentCompany && pathname === '/configuracao/regras-financeiras') {
       loadSocios()
     }
-  }, [currentCompany])
+  }, [currentCompany, pathname])
 
   const loadSocios = async () => {
     if (!currentCompany) return
@@ -226,7 +228,7 @@ export default function SociosPage() {
   )
 
   return (
-    <DashboardLayout activeMenu="configuracao" configSubmenuOpen={true}>
+    <DashboardLayout activeMenu="configuracao" >
       {pageContent}
       <SocioModal
         isOpen={showModal}
