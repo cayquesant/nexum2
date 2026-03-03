@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 import DashboardLayout from '@/components/layout/DashboardLayout'
 import { useCompanyStore } from '@/store'
 import { usePermissions } from '@/hooks/usePermissions'
 import { IconBuilding, IconLoader2 } from '@tabler/icons-react'
 
 export default function EmpresaPage() {
+  const router = useRouter()
+  const pathname = usePathname()
   const { currentCompany } = useCompanyStore()
   const { canCreateEdit } = usePermissions()
 
@@ -21,10 +24,10 @@ export default function EmpresaPage() {
   const [message, setMessage] = useState({ type: '', text: '' })
 
   useEffect(() => {
-    if (currentCompany) {
+    if (currentCompany && pathname === '/configuracao/empresa') {
       loadCompanyData()
     }
-  }, [currentCompany])
+  }, [currentCompany, pathname])
 
   const loadCompanyData = async () => {
     if (!currentCompany) return
@@ -199,7 +202,7 @@ export default function EmpresaPage() {
   )
 
   return (
-    <DashboardLayout activeMenu="configuracao" configSubmenuOpen={true}>
+    <DashboardLayout activeMenu="configuracao" >
       {pageContent}
     </DashboardLayout>
   )
