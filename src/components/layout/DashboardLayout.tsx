@@ -18,9 +18,11 @@ import {
   IconUsersGroup,
 } from '@tabler/icons-react'
 
+type MenuId = 'atividades' | 'organizador' | 'relatorios' | 'financeiro' | 'configuracao'
+
 interface DashboardLayoutProps {
   children: ReactNode
-  activeMenu: string
+  activeMenu: MenuId
 }
 
 const layoutOptions: { value: LayoutMode; label: string; icon: typeof Monitor; description: string }[] = [
@@ -31,7 +33,8 @@ const layoutOptions: { value: LayoutMode; label: string; icon: typeof Monitor; d
 
 export default function DashboardLayout({
   children,
-  activeMenu,
+  // activeMenu: Mantido para compatibilidade com páginas existentes, não é mais usado internamente
+  // pois o menu é controlado pelo currentPath para shallow routing
 }: DashboardLayoutProps) {
   const router = useRouter()
   const pathname = usePathname()
@@ -106,6 +109,11 @@ export default function DashboardLayout({
     router.push(submenuPath)
   }
 
+  // Robust path matching logic for menu highlighting
+  const isMenuActive = (menuId: string, path: string) => {
+    return path === `/${menuId}` || path.startsWith(`/${menuId}/`)
+  }
+
   const sidebarMenus = [
     { id: 'atividades', label: 'Atividades', icon: IconChecklist },
     { id: 'organizador', label: 'Organizador', icon: IconFolder },
@@ -118,6 +126,19 @@ export default function DashboardLayout({
       submenus: [
         { id: 'visao-geral', label: 'Visão Geral', icon: IconBrain, path: '/financeiro/visao-geral' },
         { id: 'lancamentos', label: 'Lançamentos', icon: IconCalendar, path: '/financeiro/lancamentos' },
+      ],
+    },
+    {
+      id: 'configuracao',
+      label: 'Configuracao',
+      icon: IconSettings,
+      hasSubmenu: true,
+      submenus: [
+        { id: 'empresa', label: 'Empresa', icon: IconBuilding, path: '/configuracao/empresa' },
+        { id: 'equipe', label: 'Equipe', icon: IconUsers, path: '/configuracao/equipe' },
+        { id: 'gestao-clientes', label: 'Gestão Clientes', icon: IconUsersGroup, path: '/configuracao/gestao-clientes' },
+        { id: 'ia-automacao', label: 'IA Automação', icon: IconBrain, path: '/configuracao/ia-automacao' },
+        { id: 'regras-financeiras', label: 'Regras Financeiras', icon: IconCoin, path: '/configuracao/regras-financeiras' },
       ],
     },
   ]
@@ -168,7 +189,7 @@ export default function DashboardLayout({
                     <button
                       onClick={() => handleMenuClick(menu.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
-                        currentPath.startsWith('/' + menu.id)
+                        isMenuActive(menu.id, currentPath)
                           ? 'bg-nexum-primary/20 text-white border border-nexum-primary/30'
                           : 'text-white/60 hover:text-white hover:bg-white/5'
                       }`}
