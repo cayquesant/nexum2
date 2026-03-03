@@ -1,14 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import DashboardLayout from '@/components/layout/DashboardLayout'
 import { useCompanyStore } from '@/store'
 import { usePermissions } from '@/hooks/usePermissions'
 import { IconBuilding, IconLoader2 } from '@tabler/icons-react'
 
 export default function EmpresaPage() {
-  const router = useRouter()
   const pathname = usePathname()
   const { currentCompany } = useCompanyStore()
   const { canCreateEdit } = usePermissions()
