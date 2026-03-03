@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import DashboardLayout from '@/components/layout/DashboardLayout'
 import { useCompanyStore } from '@/store'
 import { usePermissions } from '@/hooks/usePermissions'
 import { IconUsers, IconLoader2, IconPlus, IconX } from '@tabler/icons-react'
 
 export default function EquipePage() {
+  const pathname = usePathname()
   const { currentCompany } = useCompanyStore()
   const { canCreateEdit } = usePermissions()
 
@@ -26,10 +28,10 @@ export default function EquipePage() {
   const [message, setMessage] = useState({ type: '', text: '' })
 
   useEffect(() => {
-    if (currentCompany) {
+    if (currentCompany && pathname === '/configuracao/equipe') {
       loadMembros()
     }
-  }, [currentCompany])
+  }, [currentCompany, pathname])
 
   const loadMembros = async () => {
     if (!currentCompany) return
@@ -322,7 +324,7 @@ export default function EquipePage() {
   )
 
   return (
-    <DashboardLayout activeMenu="configuracao" configSubmenuOpen={true}>
+    <DashboardLayout activeMenu="configuracao" >
       {pageContent}
     </DashboardLayout>
   )
