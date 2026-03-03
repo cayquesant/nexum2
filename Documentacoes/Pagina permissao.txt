@@ -1,0 +1,68 @@
+# RBAC - Nexum
+Versão: v1.1
+
+## 1. Hierarquia de Perfis
+
+SUPER_ADMIN > admin > editor > visualizador
+
+---
+
+## 2. Regra Máxima do Sistema
+
+O SUPER_ADMIN possui acesso total e irrestrito ao sistema.
+
+Isso significa:
+
+- Pode criar empresas
+- Pode acessar qualquer empresa
+- Pode operar dentro de qualquer empresa
+- Pode criar, editar e excluir qualquer recurso
+- Pode gerenciar usuários
+- Pode alterar permissões
+- Pode visualizar todos os dados
+- Pode sobrescrever permissões
+- Não possui restrições funcionais
+
+O SUPER_ADMIN é o nível mais alto da hierarquia.
+
+---
+
+## 3. Modelo Multiempresa (Multi-tenant)
+
+O Nexum funciona por contexto de empresa.
+
+- Cada admin/editor/visualizador pertence a uma empresa.
+- SUPER_ADMIN não pertence a apenas uma empresa.
+- SUPER_ADMIN pode acessar qualquer empresa criada no sistema.
+- Ao acessar uma empresa, ele assume contexto ativo da empresa.
+- Dentro da empresa, ele continua com poderes totais.
+
+---
+
+## 4. Permissões por Perfil
+
+### SUPER_ADMIN
+Acesso global e total.
+
+### admin
+- Acesso total à própria empresa
+- Pode gerenciar equipe
+- Pode criar e editar tarefas
+- Pode acessar relatórios
+
+### editor
+- Pode criar e editar tarefas
+- Não pode alterar configurações críticas
+- Não pode gerenciar permissões
+
+### visualizador
+- Somente leitura
+- Não pode criar ou editar registros
+
+---
+
+## 5. Regras de Segurança
+
+- Se usuário não autenticado → redirecionar para /login
+- Se perfil tentar acessar rota não permitida → redirecionar para rota padrão do perfil
+- SUPER_ADMIN nunca deve ser bloqueado por regra de empresa

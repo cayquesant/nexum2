@@ -1,0 +1,156 @@
+# Integração com Supabase
+Projeto: Nexum
+Versão: v1.0
+
+---
+
+## 1. Objetivo
+
+Conectar o sistema Nexum ao Supabase para:
+
+- Autenticação de usuários
+- Armazenamento de dados (empresas, tarefas, etc.)
+- Controle de acesso (RBAC)
+- Arquitetura multiempresa
+
+---
+
+## 2. Autenticação (Melhor Prática)
+
+O Nexum deve utilizar o Supabase Authentication como fonte oficial de identidade.
+
+Isso significa:
+
+- Todo usuário deve ser criado via Supabase Auth.
+- Não criar usuários manualmente apenas na tabela users.
+- O ID oficial do usuário é o `auth.users.id`.
+
+Essa é a melhor prática para:
+- Segurança
+- Tokens JWT confiáveis
+- Controle de sessão
+- Reset de senha
+- Login seguro
+
+---
+
+## 3. Fluxo Correto de Criação de Usuário
+
+### Etapa 1 – Criar usuário no Supabase Auth
+
+Exemplo:
+- email: admin@nexum.com.br
+- senha: nexum2026
+
+O Supabase gera:
+- id (UUID)
+- email
+- metadata
+- token
+
+---
+
+### Etapa 2 – Criar registro complementar na tabela `usuarios`
+
+Após criar no Auth, deve-se criar um registro em:
+
+Tabela: usuarios
+
+Campos sugeridos:
+- id (UUID → mesmo id do auth.users.id)
+- nome
+- role (SUPER_ADMIN, admin, editor, visualizador)
+- empresa_id (nullable para SUPER_ADMIN)
+- criado_em
+
+Essa tabela é usada para:
+- armazenar role
+- vincular usuário à empresa
+- controlar permissões
+
+---
+
+## 4. Usuário Inicial (Seed DEV)
+
+Usuário inicial obrigatório:
+
+Email: admin@nexum.com.br  
+Senha: nexum2026  
+Role: SUPER_ADMIN  
+
+Fluxo correto:
+1. Criar via Supabase Auth
+2. Inserir na tabela usuarios com role SUPER_ADMIN
+3. empresa_id = NULL
+
+Observação:
+Esse usuário é apenas para ambiente de desenvolvimento/demonstração.
+
+---
+
+## 5. Estrutura Recomendada de Banco
+
+### Tabela: empresas
+- id (UUID)
+- nome
+- status
+- criado_em
+
+### Tabela: usuarios
+- id (UUID) → referencia auth.users.id
+- nome
+- role
+- empresa_id (FK empresas.id)
+- criado_em
+
+### Tabela: tarefas (exemplo futuro)
+- id
+- titulo
+- descricao
+- status
+- empresa_id
+- criado_por
+- responsavel_id
+- criado_em
+
+---
+
+## 6. Modelo Multiempresa
+
+- Usuários comuns (admin/editor/visualizador) pertencem a uma empresa.
+- SUPER_ADMIN não pertence a empresa fixa.
+- SUPER_ADMIN pode acessar qualquer empresa.
+- empresa_id = NULL para SUPER_ADMIN.
+
+---
+
+## 7. Fluxo de Login
+
+1. Usuário faz login via Supabase Auth.
+2. Sistema recebe sessão JWT.
+3. Sistema busca dados complementares na tabela `usuarios`.
+4. Identifica role.
+5. Aplica redirecionamento:
+
+- SUPER_ADMIN → /superadmin
+- admin/editor/visualizador → /atividades
+
+---
+
+## 8. Boas Práticas
+
+- Nunca confiar apenas no frontend para role.
+- Validar role no backend.
+- Usar Row Level Security (RLS) no Supabase.
+- Bloquear acesso por empresa usando empresa_id.
+- SUPER_ADMIN pode ter policy especial.
+
+---
+
+## 9. Segurança Recomendada
+
+- Ativar RLS em todas as tabelas.
+- Criar policy para limitar acesso por empresa.
+- Criar policy que permita SUPER_ADMIN acessar tudo.
+- Nunca expor service role key no frontend.
+- Usar apenas anon public key no cliente.

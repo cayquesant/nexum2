@@ -1,0 +1,18 @@
+# Ação "Acessar painel" — Super Admin
+Rota origem: /superadmin
+Versão: v1.0
+
+## Objetivo
+Permitir que o SUPER_ADMIN entre no painel de uma empresa específica e opere com acesso total dentro daquele contexto.
+
+## Comportamento
+Ao clicar "Acessar painel" em uma empresa:
+1. Gravar empresa ativa no Local Storage:
+   - chave: nexum_empresa_ativa_id
+   - valor: ID da empresa selecionada
+2. Redirecionar para /atividades
+
+## Critérios de aceite
+- [ ] Ao clicar, o ID correto é salvo no localStorage
+- [ ] O usuário é enviado para /atividades
+- [ ] Dados exibidos em /atividades são filtrados pela empresa ativa

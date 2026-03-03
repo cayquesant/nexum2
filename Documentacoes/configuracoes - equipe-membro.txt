@@ -1,0 +1,71 @@
+# Página: Equipe / Membros
+Rota sugerida: /configuracoes/equipe
+Projeto: Nexum
+Versão: v1.0
+
+## 1) Objetivo
+Gerenciar membros de uma empresa e convidar novos usuários vinculados à empresa ativa.
+
+## 2) Perfis com acesso
+- SUPER_ADMIN: pode acessar e convidar membros para qualquer empresa (desde que esteja com empresa ativa definida)
+- admin: pode acessar e convidar membros da própria empresa
+- editor/visualizador: não podem convidar (apenas visualização, se permitido)
+
+## 3) Regra principal (vínculo por empresa ativa)
+Todo convite/criação de membro deve ser relacionado à empresa ativa.
+
+Fonte do empresa_id:
+- localStorage: nexum_empresa_ativa_id
+
+Se não existir empresa ativa:
+- SUPER_ADMIN → voltar para /superadmin selecionar empresa
+- admin → erro (não deveria acontecer) e sugerir relogar
+
+## 4) Seções da página
+### 4.1 Lista de membros
+Exibir colunas:
+- Nome
+- E-mail
+- Perfil (admin/editor/visualizador)
+- Status (Ativo / Pendente convite)
+- Data de criação/convite
+
+Ações:
+- Alterar perfil (admin pode promover/rebaixar dentro da empresa, com limites)
+- Remover membro (admin/superadmin)
+- Reenviar convite (admin/superadmin)
+
+### 4.2 Convidar membro (form)
+Campos:
+- E-mail (obrigatório)
+- Nome (opcional no convite, pode preencher depois)
+- Perfil do convidado: admin/editor/visualizador (obrigatório)
+
+Botão:
+- "Convidar"
+
+## 5) Fluxo de convite (melhor prática Supabase)
+### Passo A — Criar usuário no Supabase Auth (convite)
+- Criar/invitar usuário via Supabase Authentication (para gerar identidade e fluxo de senha)
+- Enviar e-mail de convite / link de ativação (dependendo da estratégia)
+
+### Passo B — Registrar vínculo na base do app
+Após criar no Auth, registrar no banco:
+- id = auth.users.id
+- email
+- role = perfil escolhido
+- empresa_id = empresa ativa (localStorage)
+- status_convite = "pendente" (opcional)
+
+## 6) Regras importantes
+- Não permitir convidar usuário sem empresa ativa
+- Não permitir criar membro sem passar por Auth (não salvar senha em tabela)
+- Não permitir que admin convide para outra empresa diferente da dele
+- SUPER_ADMIN pode convidar para qualquer empresa, desde que selecione (empresa ativa)
+
+## 7) Critérios de aceite
+- [ ] convite sempre vincula ao empresa_id ativo
+- [ ] admin só convida membros da sua empresa
+- [ ] superadmin convida da empresa que está no contexto
+- [ ] usuário convidado existe no Supabase Auth
+- [ ] vínculo do usuário com empresa fica registrado no banco do Nexum

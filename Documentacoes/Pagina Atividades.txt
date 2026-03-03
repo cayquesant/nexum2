@@ -1,0 +1,58 @@
+# Página: Atividades
+Rota: /atividades
+Projeto: Nexum
+Versão: v1.1
+
+## Perfis Permitidos
+
+- admin
+- editor
+- visualizador
+- SUPER_ADMIN (se acessar manualmente)
+
+---
+
+## Objetivo
+
+Painel de produtividade da empresa ativa.
+
+---
+
+## Regras por Perfil
+
+### admin
+Acesso total à empresa.
+
+### editor
+Pode criar e editar tarefas.
+
+### visualizador
+Somente leitura.
+
+### SUPER_ADMIN
+Acesso total, mesmo dentro da empresa.
+
+---
+
+## Estrutura da Página
+
+### Header
+- "Olá, {nome}"
+- Botões: Nova Tarefa, Explorar
+- Widget de eficiência
+
+### Cards
+- Em andamento
+- Concluídos
+- Calendário
+- Produtividade
+- Próximas
+- Equipe
+
+---
+
+## Observação Importante
+
+O sistema opera por contexto de empresa.
+Usuários comuns acessam apenas sua empresa.
+SUPER_ADMIN pode alternar entre empresas sem restrição.

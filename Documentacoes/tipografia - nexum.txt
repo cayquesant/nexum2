@@ -1,0 +1,87 @@
+# Sistema de Tipografia — Nexum
+Versão: v1.0
+
+## 1) Objetivo
+
+Padronizar toda a tipografia do sistema Nexum para garantir:
+
+- Consistência visual
+- Identidade forte de marca
+- Escalabilidade
+- Fácil manutenção futura
+
+Nenhuma página deve definir tipografia manualmente fora do padrão global.
+
+---
+
+## 2) Fonte Oficial
+
+Fonte principal:
+- Inter (recomendado para SaaS moderno)
+
+Fallback:
+- system-ui, -apple-system, sans-serif
+
+---
+
+## 3) Escala Tipográfica
+
+### H1
+- 32px
+- 700 (bold)
+- line-height: 120%
+
+### H2
+- 24px
+- 600 (semibold)
+- line-height: 130%
+
+### H3
+- 20px
+- 600
+- line-height: 140%
+
+### H4
+- 18px
+- 500
+- line-height: 140%
+
+### Body
+- 14px
+- 400
+- line-height: 150%
+
+### Small
+- 12px
+- 400
+- line-height: 150%
+
+---
+
+## 4) Regras Obrigatórias
+
+- Todas as páginas devem utilizar o sistema de tipografia global.
+- Não usar font-size inline.
+- Não usar font-weight manual fora do padrão.
+- Não criar variações fora da escala definida.
+
+---
+
+## 5) Implementação Recomendada
+
+Criar:
+
+- Tokens globais de tipografia
+OU
+- Componente base <Typography />
+
+Todas as páginas novas e antigas devem ser refatoradas para usar o padrão.
+
+---
+
+## 6) Benefícios
+
+- Facilidade para alterar identidade no futuro
+- Design consistente
+- Aparência profissional
+- Escalabilidade SaaS

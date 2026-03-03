@@ -1,0 +1,55 @@
+# Contexto de Empresa (Multiempresa) — Nexum
+Versão: v1.0
+
+## 1) Conceito
+O Nexum é multiempresa. Isso significa que grande parte das telas e dados dependem de uma "empresa ativa" (empresa_id).
+
+- Usuários comuns (admin/editor/visualizador) pertencem a 1 empresa.
+- SUPER_ADMIN pode acessar qualquer empresa e alternar o contexto de empresa.
+
+## 2) Empresa ativa (empresa_id)
+A empresa ativa é a empresa atualmente selecionada para navegação e operações.
+
+### Onde guardar
+Para o MVP:
+- Armazenar `empresa_ativa_id` no Local Storage.
+
+Chave padrão:
+- localStorage: `nexum_empresa_ativa_id`
+
+Exemplo de valor:
+- "c4502717-d593-49eb-bb08-a874744cf64a"
+
+## 3) Regras de atualização do contexto
+
+### 3.1 Ao clicar "Acessar painel" (SUPER_ADMIN)
+Na lista de empresas em /superadmin, cada empresa possui um botão "Acessar painel".
+
+Ao clicar:
+1. Definir empresa ativa:
+   - localStorage.setItem("nexum_empresa_ativa_id", empresa.id)
+2. Redirecionar para o painel padrão da empresa:
+   - /atividades
+
+Obs:
+- SUPER_ADMIN continua sendo SUPER_ADMIN, porém agora está operando dentro do contexto da empresa selecionada.
+
+### 3.2 Ao logar como admin/editor/visualizador
+Usuários comuns já possuem `empresa_id` associado no banco.
+
+Ao autenticar:
+1. Buscar o `empresa_id` do usuário na tabela de usuários/memberships
+2. Salvar no localStorage como empresa ativa:
+   - nexum_empresa_ativa_id = empresa_id do usuário
+3. Redirecionar para /atividades
+
+## 4) Guardrails (regras de segurança)
+- Se uma página exige contexto de empresa e não existir `nexum_empresa_ativa_id`:
+  - Se SUPER_ADMIN: redirecionar para /superadmin (para selecionar empresa)
+  - Se usuário comum: redirecionar para /login (ou mostrar erro de contexto inválido)
+
+## 5) Recomendação de melhoria (opcional)
+Além do localStorage, futuramente usar:
+- URL com empresa: /empresa/:empresaId/atividades
+ou
+- salvar empresa ativa em sessão (state) para evitar inconsistências entre abas.

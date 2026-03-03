@@ -1,0 +1,70 @@
+# Página: Login
+Rota: /login
+Projeto: Nexum
+Versão: v1.1
+
+## Objetivo
+Permitir acesso ao sistema e redirecionar o usuário conforme seu perfil.
+
+---
+
+## Perfis do sistema
+
+- SUPER_ADMIN
+- admin
+- editor
+- visualizador
+
+---
+
+## Regra de Redirecionamento
+
+Após autenticação:
+
+- Se role == SUPER_ADMIN → redirecionar para /superadmin
+- Se role == admin/editor/visualizador → redirecionar para /atividades
+
+---
+
+## Usuário Seed (DEV apenas)
+
+Email: admin@nexum.com.br  
+Senha: nexum2026  
+Perfil: SUPER_ADMIN  
+
+Observação:
+Usuário fixo apenas para ambiente de desenvolvimento/demonstração.
+Em produção, remover seed fixo.
+
+---
+
+## Escopo
+
+### Faz
+- Login (email + senha)
+- Recuperação de senha
+- Identificação de perfil (role)
+- Redirecionamento automático por perfil
+
+### Não faz
+- Cadastro
+- Login social
+- Alteração de senha dentro da tela
+
+---
+
+## Estados da UI
+
+- Loading
+- Erro de credenciais
+- Erro de rede
+- Recuperação enviada (mensagem genérica)
+
+---
+
+## Critérios de Aceite
+
+- Não existe botão de cadastro
+- Redirecionamento por perfil funciona
+- SUPER_ADMIN cai em /superadmin
+- Demais perfis caem em /atividades

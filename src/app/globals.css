@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a1a;
+  --foreground: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.dark-card {
+  background: linear-gradient(145deg, rgba(30, 30, 50, 0.8) 0%, rgba(20, 20, 35, 0.9) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 16px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}
+
+/* FullCalendar Dark Theme */
+.fc {
+  --fc-border-color: rgba(255, 255, 255, 0.1);
+  --fc-button-bg-color: rgba(255, 255, 255, 0.1);
+  --fc-button-border-color: rgba(255, 255, 255, 0.2);
+  --fc-button-text-color: rgba(255, 255, 255, 0.8);
+  --fc-button-hover-bg-color: rgba(255, 255, 255, 0.15);
+  --fc-button-hover-border-color: rgba(255, 255, 255, 0.3);
+  --fc-button-active-bg-color: #6366f1;
+  --fc-button-active-border-color: #6366f1;
+  --fc-today-bg-color: rgba(99, 102, 241, 0.15);
+  --fc-neutral-bg-color: rgba(255, 255, 255, 0.05);
+  --fc-page-bg-color: transparent;
+  --fc-highlight-color: rgba(99, 102, 241, 0.2);
+}
+
+.fc .fc-toolbar-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.fc .fc-daygrid-day-number {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(99, 102, 241, 0.15);
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.fc .fc-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.fc .fc-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.fc .fc-button-active,
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.fc .fc-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fc .fc-toolbar-chunk {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fc .fc-prev-button,
+.fc .fc-next-button {
+  padding: 0.5rem 0.75rem;
+}
+
+.fc-event {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border: none !important;
+}
+
+.fc-event:hover {
+  filter: brightness(1.15);
+  transform: scale(1.02);
+}
+
+.fc-event .fc-event-main {
+  color: white;
+  font-weight: 500;
+}
+
+.fc .fc-daygrid-event {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc .fc-timegrid-slot {
+  height: 3rem;
+}
+
+.fc .fc-timegrid-axis-cushion {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color: #6366f1;
+}
+
+.fc .fc-timegrid-now-indicator-arrow {
+  border-color: #6366f1;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.fc .fc-more-link {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.fc .fc-popover {
+  background: rgba(15, 15, 35, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+}
+
+.fc .fc-popover-header {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+}

@@ -1,0 +1,164 @@
+# Módulo: Configurações
+Projeto: Nexum
+Versão: v1.0
+
+---
+
+## 1) Objetivo
+
+Centralizar todas as configurações da empresa ativa.
+
+O menu "Configurações" deve conter submenus organizados e separados por domínio funcional.
+
+Esse módulo depende da empresa ativa (empresa_id salvo no contexto do sistema).
+
+---
+
+## 2) Estrutura de Submenus
+
+Ao clicar em "Configurações" na sidebar, devem aparecer os seguintes submenus:
+
+1. Empresa
+2. Regras Financeiras
+3. IA & Automação
+4. Equipe
+5. Gestão Online
+
+---
+
+# 3) Submenu: Empresa
+
+## Objetivo
+Permitir editar os dados da empresa ativa.
+
+## Campos obrigatórios
+
+- Nome da empresa
+- Nicho/mercado
+- Investimento mensal (MRR)
+- Dia de vencimento
+- Nome responsável
+- Número responsável
+- E-mail da empresa
+- Status (ativo/inativo)
+
+## Comportamento
+- Deve carregar dados da empresa ativa.
+- Deve permitir editar e salvar.
+- Apenas ADMIN e SUPER_ADMIN podem editar.
+- Editor e Visualizador apenas visualizam.
+
+---
+
+# 4) Submenu: Regras Financeiras
+
+## Objetivo
+Permitir que o ADMIN configure divisão societária e regras financeiras da empresa.
+
+## Funcionalidades
+
+### Sócios
+- Cadastrar sócios
+- Nome do sócio
+- Percentual de participação (%)
+
+## Regras
+- A soma das porcentagens deve ser 100%.
+- Apenas ADMIN e SUPER_ADMIN podem editar.
+- Dados vinculados à empresa ativa.
+
+---
+
+# 5) Submenu: IA & Automação
+
+## Status
+Em desenvolvimento.
+
+## Comportamento
+Exibir:
+- Label: "Em desenvolvimento"
+- Nenhuma funcionalidade ativa ainda
+- Layout preparado para futuras automações
+
+---
+
+# 6) Submenu: Equipe
+
+## Objetivo
+Gerenciar membros da empresa ativa.
+
+## Funcionalidades
+
+### Listar membros
+- Nome
+- E-mail
+- Perfil (admin/editor/visualizador)
+- Permissão especial: Aprovador (boolean)
+
+### Convidar membro
+Campos:
+- E-mail
+- Perfil (admin/editor/visualizador)
+- Checkbox: "Aprovador"
+
+## Regra Aprovador
+Se membro for "Aprovador":
+- Pode aprovar TASK
+- Pode aprovar Gestão de Cliente
+
+Se não for aprovador:
+- Apenas executa ações conforme role.
+
+## Permissões
+- ADMIN pode convidar e editar membros da própria empresa.
+- SUPER_ADMIN pode gerenciar qualquer empresa (desde que esteja no contexto).
+- Editor e Visualizador não podem convidar.
+
+---
+
+# 7) Submenu: Gestão Online
+
+## Objetivo
+Cadastrar e gerenciar clientes da empresa.
+
+Baseado nos prints enviados:
+
+### Seção 1 – Dados fundamentais
+- Nome da empresa cliente
+- Nicho
+- Investimento
+- Dia vencimento
+- Responsável
+- Contato
+- E-mail
+- Senha de acesso
+
+### Seção 2 – Briefing estratégico
+- Objetivo principal
+- Canais de atuação (Meta Ads, Google Ads, TikTok, etc.)
+- Diferenciais competitivos
+
+### Seção 3 – Atribuição de equipe
+- Selecionar membros responsáveis
+
+### Seção 4 – Escopo do projeto
+- Gestão de tráfego pago
+- Social media & conteúdo
+- Criação de criativos/design
+- SEO & otimização
+
+## Regras
+- Todos os registros devem estar vinculados à empresa ativa.
+- ADMIN pode criar e editar clientes.
+- Editor pode editar (definir depois nível exato).
+- Visualizador apenas visualiza.
+- Aprovador pode aprovar alterações estratégicas.
+
+---
+
+# 8) Regras Gerais
+
+- Todas as telas dependem da empresa ativa.
+- Se não houver empresa ativa, redirecionar conforme regra do sistema.
+- Permissões devem ser validadas no backend.
+- Não confiar apenas na UI para controle de acesso.

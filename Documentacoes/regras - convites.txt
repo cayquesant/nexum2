@@ -1,0 +1,23 @@
+# Regras de Convite de Usuários — Nexum
+Versão: v1.0
+
+## Objetivo
+Padronizar o processo de convite de novos usuários para uma empresa.
+
+## Quem pode convidar
+- SUPER_ADMIN: qualquer empresa (com empresa ativa definida)
+- admin: apenas própria empresa
+- editor/visualizador: não pode convidar
+
+## Fonte do empresa_id do convite
+- empresa_id = nexum_empresa_ativa_id (localStorage)
+
+## Resultado do convite
+- Usuário criado no Supabase Auth
+- Usuário vinculado à empresa no banco do app
+- Usuário receberá e-mail para definir senha e entrar
+
+## Estados possíveis
+- pendente (convite enviado)
+- ativo (usuário aceitou)
+- removido (revogado)
