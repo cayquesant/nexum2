@@ -1,0 +1,120 @@
+[   21509ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://czaquxrxryqoqkjqnrmb.supabase.co/auth/v1/token?grant_type=password:0
+[   21510ms] [ERROR] Erro ao fazer login: AuthApiError: Invalid login credentials
+    at handleError (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=fd097099:7438:8)
+    at async _handleRequest (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=fd097099:7475:18)
+    at async _request (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=fd097099:7457:15)
+    at async SupabaseAuthClient.signInWithPassword (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=fd097099:9512:11)
+    at async handleSubmit (http://localhost:5173/src/pages/Login.tsx:25:28) @ http://localhost:5173/src/pages/Login.tsx:38
+[   28434ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://czaquxrxryqoqkjqnrmb.supabase.co/rest/v1/profiles?select=*&id=eq.f44e55c7-8dfc-4fdc-a388-c8ef90ea4902:0
+[   28493ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://czaquxrxryqoqkjqnrmb.supabase.co/rest/v1/profiles?select=*&id=eq.f44e55c7-8dfc-4fdc-a388-c8ef90ea4902:0
+[   30039ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(1) or minHeight(1) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[   30039ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(1) or minHeight(1) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[   30040ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(1) or minHeight(1) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[   30040ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(1) or minHeight(1) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[   30042ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[   30042ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  297094ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  297095ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  297095ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  297095ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  365270ms] [ERROR] In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <div> p 
+
+  ...
+    <AppContent>
+      <div className="flex h-scr...">
+        <div>
+        <AIAgent>
+        <LayoutModal>
+        <Sidebar>
+        <div className="flex flex-...">
+          <Navbar>
+          <div className="flex-1 ove...">
+            <div className="max-w-[160...">
+              <Routes>
+                <RenderedRoute match={{...}} routeContext={{outlet:null, ...}}>
+                  <FinancialOverview>
+                    <div className="space-y-8 ...">
+                      <div>
+                      <div className="min-h-[600px]">
+                        <PartnerManagement transactions={[...]} clients={[...]}>
+                          <div className="space-y-8 ...">
+                            <div>
+                            <div>
+                            <div>
+                            <div className="grid grid-...">
+                              <div className="bg-gradien...">
+                                <div>
+                                <div>
+                                <h3>
+                                <div>
+>                               <p
+>                                 className="text-xs text-slate-500 mt-6 font-medium relative z-10 flex items-center g..."
+>                               >
+>                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500">
+                                  ...
+                              ...
+                            ...
+ @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=fd097099:1774
+[  486053ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  486054ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  486054ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  486054ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  854746ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  854746ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  854746ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704
+[  854747ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:5173/node_modules/.vite/deps/recharts.js?v=fd097099:6704

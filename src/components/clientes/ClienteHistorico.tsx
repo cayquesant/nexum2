@@ -18,21 +18,33 @@ export function ClienteHistorico({ clienteId }: ClienteHistoricoProps) {
   }, [clienteId])
 
   const loadHistorico = async () => {
+    console.log('🔄 ClienteHistorico: Carregando histórico para clienteId:', clienteId)
+    setLoading(true)
     try {
       const response = await authFetch(`/api/clientes/${clienteId}/historico`)
+      console.log('📡 ClienteHistorico: Response status:', response.status)
       const result = await response.json()
+      console.log('📦 ClienteHistorico: Response data:', result)
       if (response.ok) {
         setHistorico(result.historico || [])
+        console.log('✅ ClienteHistorico: Histórico carregado:', result.historico?.length || 0, 'itens')
+      } else {
+        console.error('❌ ClienteHistorico: API retornou erro:', result.error)
       }
     } catch (error) {
-      console.error('Erro ao carregar histórico:', error)
+      console.error('❌ ClienteHistorico: Erro ao carregar histórico:', error)
     } finally {
       setLoading(false)
     }
   }
 
-  const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString('pt-BR', {
+  const formatDate = (date: string | null | undefined) => {
+    if (!date) return '-'
+
+    const dateObj = new Date(date)
+    if (isNaN(dateObj.getTime())) return '-'
+
+    return dateObj.toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',

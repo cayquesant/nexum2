@@ -42,21 +42,43 @@ export async function GET(
 
     const { data: cliente, error } = await supabase
       .from('clientes')
-      .select(`
-        *,
-        servicos:servicos(id, nome),
-        objetivos:objetivos(id, nome),
-        equipe:usuarios(id, nome, email, cargo)
-      `)
+      .select('*')
       .eq('id', id)
       .eq('empresa_id', usuario.empresa_id)
       .single()
 
     if (error || !cliente) {
+      console.error('Erro ao buscar cliente:', error)
       return NextResponse.json({ error: 'Cliente não encontrado' }, { status: 404 })
     }
 
-    return NextResponse.json({ cliente })
+    // Buscar serviços do cliente
+    const { data: servicosData } = await supabase
+      .from('cliente_servicos')
+      .select('servico_id, servicos(id, nome)')
+      .eq('cliente_id', id)
+
+    // Buscar objetivos do cliente
+    const { data: objetivosData } = await supabase
+      .from('cliente_objetivos')
+      .select('objetivo_id, objetivos(id, nome)')
+      .eq('cliente_id', id)
+
+    // Buscar equipe do cliente
+    const { data: equipeData } = await supabase
+      .from('cliente_equipe')
+      .select('usuario_id, usuarios(id, nome, email, cargo)')
+      .eq('cliente_id', id)
+
+    // Montar response com relacionamentos
+    const clienteCompleto = {
+      ...cliente,
+      servicos: servicosData?.map(s => s.servicos).filter(Boolean) || [],
+      objetivos: objetivosData?.map(o => o.objetivos).filter(Boolean) || [],
+      equipe: equipeData?.map(e => e.usuarios).filter(Boolean) || []
+    }
+
+    return NextResponse.json({ cliente: clienteCompleto })
   } catch (error) {
     console.error('Erro ao buscar cliente:', error)
     return NextResponse.json({ error: 'Erro interno' }, { status: 500 })

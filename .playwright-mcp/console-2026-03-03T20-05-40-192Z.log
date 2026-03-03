@@ -1,0 +1,10 @@
+[  328102ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/ad14e8ad-ee34-4ef5-b967-4ed8b7325a0e:0
+[  667640ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/ad14e8ad-ee34-4ef5-b967-4ed8b7325a0e:0
+[  674019ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/ad14e8ad-ee34-4ef5-b967-4ed8b7325a0e:0
+[  773121ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/8f183d82-350c-4f9b-9079-1cb657f05ffc:0
+[  778237ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/ad14e8ad-ee34-4ef5-b967-4ed8b7325a0e:0
+[  783876ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/8f183d82-350c-4f9b-9079-1cb657f05ffc:0
+[  813086ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0
+[  818724ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0
+[  823984ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/b4afa3e2-ead1-4a15-956f-2e780cb64f39:0
+[  837319ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0

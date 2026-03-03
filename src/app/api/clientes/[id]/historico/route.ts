@@ -72,9 +72,14 @@ export async function GET(
     }
 
     const historicoComNomes = historico?.map(h => ({
-      ...h,
+      id: h.id,
+      clienteId: h.cliente_id,
+      statusAnterior: h.status_anterior,
+      statusNovo: h.status_novo,
+      alteradoPor: h.alterado_por,
+      alteradoEm: h.alterado_em,
       alteradoPorNome: h.alterado_por ? usuarios[h.alterado_por] : null
-    }))
+    })) || []
 
     return NextResponse.json({ historico: historicoComNomes })
   } catch (error) {

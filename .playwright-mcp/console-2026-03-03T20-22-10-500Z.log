@@ -1,0 +1,285 @@
+[    1116ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[  206531ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0
+[  220709ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/8d2b3908-ca81-4eee-8713-7f6e1c6d0e83:0
+[  224149ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/b4afa3e2-ead1-4a15-956f-2e780cb64f39:0
+[  226462ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0
+[  229750ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/3b21e424-d084-466c-9a7c-4741bdc18508:0
+[  249310ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/b4afa3e2-ead1-4a15-956f-2e780cb64f39:0
+[  252551ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/8d2b3908-ca81-4eee-8713-7f6e1c6d0e83:0
+[  274453ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  294033ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  298352ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  583010ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  587068ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/e0c6be79-ce58-46d3-aed6-df25777005b1:0
+[  587532ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/e0c6be79-ce58-46d3-aed6-df25777005b1:0
+[  591787ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  592155ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/47a89bbf-4b1e-4807-85eb-56ba375bc0ed:0
+[  646097ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/736ed562-a6dc-4fc5-af20-be34e7bfc3c7:0
+[  646516ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/736ed562-a6dc-4fc5-af20-be34e7bfc3c7:0
+[  648389ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/82841a02-903a-4aae-a499-0be72c75df61:0
+[  648628ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/82841a02-903a-4aae-a499-0be72c75df61:0
+[  650526ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/736ed562-a6dc-4fc5-af20-be34e7bfc3c7:0
+[  650751ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/736ed562-a6dc-4fc5-af20-be34e7bfc3c7:0
+[  656301ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/api/clientes/736ed562-a6dc-4fc5-af20-be34e7bfc3c7:0
+[ 3439908ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/gestao-clientes/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3452765ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3452943ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3453034ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3456050ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3457278ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3457925ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/DashboardLayout.tsx
+./src/app/configuracao/equipe/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[ 3458166ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao?_rsc=1aj7l:0
+[ 3458536ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao?_rsc=1aj7l:0
+[ 3458786ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao?_rsc=1aj7l:0
+[ 3458987ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao?_rsc=1aj7l:0
+[ 3459256ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao:0
+[ 3460488ms] ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+    at processResult (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\webpack\bundle5.js:28:400590)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\webpack\bundle5.js:28:402302)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:8645)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:5019)
+    at r.callback (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:4039)
+[ 3460482ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[ 3460540ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[ 3465041ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao:0
+[ 3465218ms] ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+    at processResult (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\webpack\bundle5.js:28:400590)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\webpack\bundle5.js:28:402302)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:8645)
+    at <unknown> (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:5019)
+    at r.callback (file://C:\Users\cayqu\Nexum2\nexum2\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js:1:4039)
+[ 3465217ms] [ERROR] ./src/components/layout/DashboardLayout.tsx
+Error: 
+  x Expression expected
+     ,-[C:\Users\cayqu\Nexum2\nexum2\src\components\layout\DashboardLayout.tsx:101:1]
+ 101 |     { id: 'financeiro', label: 'Financeiro', icon: IconCoin },
+ 102 | 
+ 103 |   // Layout calculations
+ 104 |   const showSidebar = layoutMode === 'default' || layoutMode === 'compact'
+     :   ^^^^^
+ 105 |   const showHeader = layoutMode === 'default' || layoutMode === 'compact'
+ 106 |   const sidebarCollapsed = layoutMode === 'compact'
+ 106 | 
+     `----
+
+Caused by:
+    Syntax Error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[ 3623177ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao:0
+[ 3623648ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:0
+[ 3623648ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:0
+[ 3623649ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:0
+[ 3623649ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:0
+[ 3623649ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:0
+[ 3633604ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao:0
+[ 3633682ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:0
+[ 3633682ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:0
+[ 3633683ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:0
+[ 3633698ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:0
+[ 3633698ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:0
+[ 3851352ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/configuracao/ia-automacao:0
+[ 3851408ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:0
+[ 3851409ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:0
+[ 3851409ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:0
+[ 3851422ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:0
+[ 3851422ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:0
+[ 3855910ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/atividades:0
+[ 3855969ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:0
+[ 3855969ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:0
+[ 3855969ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:0
+[ 3855981ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:0
+[ 3855981ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:0
