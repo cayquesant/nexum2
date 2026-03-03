@@ -5,7 +5,7 @@ import { ClienteList } from '@/components/clientes/ClienteList'
 
 export default function GestaoClientesPage() {
   return (
-    <DashboardLayout activeMenu="configuracao" configSubmenuOpen={true}>
+    <DashboardLayout activeMenu="configuracao" >
       <ClienteList />
     </DashboardLayout>
   )

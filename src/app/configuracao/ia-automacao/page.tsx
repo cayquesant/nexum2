@@ -27,7 +27,7 @@ export default function IAAutomacaoPage() {
   )
 
   return (
-    <DashboardLayout activeMenu="configuracao" configSubmenuOpen={true}>
+    <DashboardLayout activeMenu="configuracao" >
       {pageContent}
     </DashboardLayout>
   )
