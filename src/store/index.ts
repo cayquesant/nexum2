@@ -239,6 +239,23 @@ export const useCompanyStore = create<CompanyState>()(
       }))
 
       set({ companies, isLoading: false })
+
+    // NOVO: Selecionar automaticamente a empresa do usuário se aplicável
+      const { currentCompany } = get()
+      const { user } = useAuthStore.getState()
+
+      // Apenas para usuários não-SUPER_ADMIN
+      if (!currentCompany && user && user.role !== 'SUPER_ADMIN' && user.empresaId) {
+        const userCompany = companies.find((c) => c.id === user.empresaId)
+        if (userCompany) {
+          console.log('[Auto-Select] Selecionando automaticamente empresa:', userCompany.nome, 'para usuário:', user.email)
+          set({ currentCompany: userCompany })
+        } else {
+          console.warn('[Auto-Select] Empresa não encontrada para usuário:', user.empresaId, 'empresa_id:', user.email)
+        }
+      }
+
+      set({ companies, isLoading: false })
     } catch (error) {
       console.error('Erro ao carregar empresas:', error)
       set({ companies: [], isLoading: false })
