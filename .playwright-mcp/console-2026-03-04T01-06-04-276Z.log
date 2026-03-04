@@ -1,0 +1,49 @@
+[     692ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[     692ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[   25074ms] [ERROR] Failed to fetch RSC payload for http://localhost:3008/configuracao/empresa. Falling back to browser navigation. Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:283288)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7) @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[   25253ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3008/configuracao/empresa:0
+[   25437ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[   25439ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[   25439ms] [ERROR] The above error occurred in the <ServerRoot> component:
+
+    at ServerRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:117:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32

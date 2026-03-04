@@ -1,0 +1,4 @@
+[     568ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[     569ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226

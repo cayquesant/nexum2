@@ -1,0 +1,287 @@
+[     757ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[     757ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight'). @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[  385651ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[  385652ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[  385955ms] [ERROR] Failed to fetch RSC payload for http://localhost:3008/configuracao/empresa. Falling back to browser navigation. Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:283288)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7) @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  386231ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3008/configuracao/empresa:0
+[  386524ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[  386530ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[  386533ms] [ERROR] The above error occurred in the <ServerRoot> component:
+
+    at ServerRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:117:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  428842ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3008/configuracao/empresa:0
+[  429164ms] Error: Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at getNotFoundError (file://c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\parseNotFoundError.js:124:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getModuleBuildError (file://c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\webpackModuleError.js:104:27)
+    at async (file://c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:29:49)
+    at async (file://c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:27:21)
+[  429166ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  452991ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  453351ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  453578ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  466770ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  467048ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  467151ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  489556ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  489768ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  489871ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  512187ms] [ERROR] ./src/components/layout/DashboardLayout.tsx:7:1
+Module not found: Can't resolve '../globals.css'
+   5 |
+   6 | // Importar CSS para animações
+>  7 | import '../globals.css'
+     | ^
+   8 | import { useAuthStore, useCompanyStore, useLayoutStore, LayoutMode } from '@/store'
+   9 | import { isSuperAdmin } from '@/types'
+  10 | import { LogOut, ChevronDown, Loader2, Building2, ArrowLeft, Bell, Settings, User as UserIcon, LayoutGrid, Monitor, Focus, ChevronRight } from 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/configuracao/empresa/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  512479ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:136
+[  512479ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:136
+[  513252ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconDollarSign' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconDollarSign').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:136
+[  513252ms] [WARNING] ./src/app/financeiro/visao-geral/page.tsx
+Attempted import error: 'IconTrendingUpRight' is not exported from '__barrel_optimize__?names=IconDollarSign,IconTrendingDown,IconTrendingUp,IconTrendingUpRight,IconUsers!=!@tabler/icons-react' (imported as 'IconTrendingUpRight').
+
+Import trace for requested module:
+./src/app/financeiro/visao-geral/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:136
+[  513705ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3008/_next/static/webpack/0b485ca80b7ad7e5.webpack.hot-update.json:0
+[  513706ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[  513927ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3008/configuracao/empresa:0
+[  514110ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[  514111ms] Error: Could not find the module "C:\Users\cayqu\Nexum2\nexum2-1\src\app\configuracao\empresa\page.tsx#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267034
+    at eN (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:267229)
+    at eF (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:268895)
+    at c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265943
+    at Object.toJSON (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:266407)
+    at stringify (<anonymous>)
+    at eq (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:274775)
+    at eJ (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:275293)
+    at Timeout._onTimeout (c:\Users\cayqu\Nexum2\nexum2-1\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:265080)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[  514112ms] [ERROR] The above error occurred in the <ServerRoot> component:
+
+    at ServerRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:117:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32

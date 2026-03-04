@@ -48,6 +48,7 @@ export default function DashboardLayout({
   const [configSubmenuOpen, setConfigSubmenuOpen] = useState(false)
   const [financeiroSubmenuOpen, setFinanceiroSubmenuOpen] = useState(false)
   const [currentPath, setCurrentPath] = useState(pathname)
+  const [isPageTransitioning, setIsPageTransitioning] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const userIsSuperAdmin = user ? isSuperAdmin(user.role) : false
@@ -82,10 +83,25 @@ export default function DashboardLayout({
     setCurrentPath(pathname)
   }, [pathname])
 
+  // Animação de transição de página suave
+  useEffect(() => {
+    // Se a rota mudou, aplica animação de transição
+    if (currentPath !== pathname) {
+      setIsPageTransitioning(true)
+      // Remove a animação após completar
+      const timer = setTimeout(() => {
+        setIsPageTransitioning(false)
+      }, 300) // Duração da animação
+      return () => clearTimeout(timer)
+    }
+  }, [pathname, currentPath])
+
   // Auto-open submenu based on pathname
   useEffect(() => {
     const isConfigPath = pathname.startsWith('/configuracao/')
     const isFinanceiroPath = pathname.startsWith('/financeiro/')
+
+    // Abre o submenu se a URL pertencer a ele, fecha se não
     setConfigSubmenuOpen(isConfigPath)
     setFinanceiroSubmenuOpen(isFinanceiroPath)
   }, [pathname])
@@ -99,8 +115,10 @@ export default function DashboardLayout({
     if (menuId === 'atividades') {
       router.push('/atividades')
     } else if (menuId === 'configuracao') {
+      // Apenas toggle do submenu, sem navegação
       setConfigSubmenuOpen(!configSubmenuOpen)
     } else if (menuId === 'financeiro') {
+      // Apenas toggle do submenu, sem navegação
       setFinanceiroSubmenuOpen(!financeiroSubmenuOpen)
     }
   }
@@ -387,7 +405,7 @@ export default function DashboardLayout({
           )}
 
           {/* Page Content */}
-          <main className={`p-4 space-y-4 ${!showHeader ? 'pt-4' : ''}`}>
+          <main className={`p-4 space-y-4 smooth-update ${!showHeader ? 'pt-4' : ''} ${isPageTransitioning ? 'smooth-update enter' : 'smooth-update enter-active'}`}>
             {children}
           </main>
         </div>
